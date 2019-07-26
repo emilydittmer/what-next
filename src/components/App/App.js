@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Search from '../../containers/Search/Search'
 
 const App = () => {
   return (
@@ -7,6 +8,7 @@ const App = () => {
       <header className="App-header">
         <h1>What Next?</h1>
       </header>
+      <Search />
     </div>
   );
 }
