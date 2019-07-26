@@ -1,0 +1,31 @@
+.search-field {
+  top: 50%;
+  left: 30%;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+}
+
+.search-input {
+  height: 50px;
+  width: 500px;
+  font-size: 1.35em;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 300;
+  padding: 0;
+  padding-left: 10px;
+  border-radius: 3%;
+  margin: 0;
+}
+
+.submit-btn {
+  height: 50px;
+  width: 50px;
+  border-width: 2px;
+  margin:0;
+  padding: 1px;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  background-color: hsla(4, 62%, 30%, 1);
+  color: #fff;
+}

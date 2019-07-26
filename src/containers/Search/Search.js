@@ -38,8 +38,9 @@ class Search extends Component {
 
   render(){
     return(
-      <form>
+      <form className='search-field'>
         <input 
+          className='search-input'
           type='text'
           placeholder='TV Show Title'
           value={this.state.searchValue}
@@ -47,7 +48,9 @@ class Search extends Component {
           onChange={event => this.handleChange(event)}
         />
         <input
+          className='submit-btn'
           type='submit'
+          value= 'Submit'
           onClick = {event => this.handleSubmit(event)}
           />
       </form>
