@@ -28,8 +28,11 @@ class Search extends Component {
     } else {
       this.setState({error: "No results found. Please search again"})
     }
+    // this.findSuggestions()
     this.resetInputs();
   }
+
+  // findSuggestions = async
 
 
   resetInputs = () => {
