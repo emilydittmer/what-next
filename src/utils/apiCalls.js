@@ -1,7 +1,8 @@
 import { searchUrl, imageUrl, suggestionsUrl } from "./paths";
 import { key } from "./apiKey";
+import { cleanSearch } from './cleaner';
 
-export const fetchwatchedShowId = (search) => {
+export const fetchWatchedShowId = (search) => {
   return fetch(
     `${ searchUrl }${ key }&language=en-US&query=${ search }&page=1`
   ) 
@@ -12,6 +13,6 @@ export const fetchwatchedShowId = (search) => {
       return response.json()
     }
   })
-  .then(data => console.log(data.results.id))
+  .then(data => cleanSearch(data.results[0]))
   .catch(error => console.log(error.message))
 }
