@@ -10,9 +10,11 @@ class SuggestionCard extends Component {
     }
   }
 
+
   render() {
+    const { id, name, backgroundImg, voteAverage, overview, date } = this.props;
     return(
-      <h3>{this.props.name}</h3>
+      <h3>{name}</h3>
     )
   }
 }

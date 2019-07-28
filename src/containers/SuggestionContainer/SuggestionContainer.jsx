@@ -16,7 +16,7 @@ class SuggestionContainer extends Component{
   componentDidMount() {
     fetchSuggestedShows(this.props.search.id)
       .then(shows => this.props.grabSuggestedShows(shows))
-      .catch(this.setState({ error: "Error fetching data" }));
+      .catch(this.setState({ error: "Error fetching suggestions" }));
   }
 
   render(){
