@@ -14,7 +14,7 @@ export const fetchWatchedShowId = (search) => {
     }
   })
   .then(data => cleanSearch(data.results[0]))
-  .catch(error => console.log(error.message))
+  .catch(error => Error("Error while fetching show"))
 }
 
 export const fetchSuggestedShows = (showId) => {

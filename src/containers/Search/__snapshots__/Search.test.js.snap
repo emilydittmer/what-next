@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should match the snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Search should render an error 1`] = `ShallowWrapper {}`;
