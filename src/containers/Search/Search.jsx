@@ -3,8 +3,9 @@ import './Search.scss';
 import { fetchWatchedShowId } from '../../utils/apiCalls';
 import { setSearchShow } from '../../actions';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
-class Search extends Component {
+export class Search extends Component {
   constructor(){
     super();
     this.state = {
@@ -25,10 +26,10 @@ class Search extends Component {
     let searchedShow = await fetchWatchedShowId(searchValue)
     if (searchedShow){
       this.props.setSearchShow(searchedShow)
+      
     } else {
       this.setState({error: "No results found. Please search again"})
     }
-    // this.findSuggestions()
     this.resetInputs();
   }
 
@@ -62,7 +63,7 @@ class Search extends Component {
 }
 
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setSearchShow: show => dispatch(setSearchShow(show))
 })
 
