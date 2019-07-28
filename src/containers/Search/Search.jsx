@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 export class Search extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       error: '',
       searchValue: ''
@@ -24,17 +24,15 @@ export class Search extends Component {
 
     const { searchValue }= this.state;
     let searchedShow = await fetchWatchedShowId(searchValue)
+
     if (searchedShow){
       this.props.setSearchShow(searchedShow)
-      
+      this.props.history.push("/results")
     } else {
       this.setState({error: "No results found. Please search again"})
     }
     this.resetInputs();
   }
-
-  // findSuggestions = async
-
 
   resetInputs = () => {
     this.setState({searchValue: ''})
@@ -57,11 +55,15 @@ export class Search extends Component {
           value= 'Submit'
           onClick = {event => this.handleSubmit(event)}
           />
+        {this.state.error === ''  ? (
+          <p></p>
+          ) : (
+          <p>{this.state.error}</p>
+        )}
       </form>
     )
   }
 }
-
 
 export const mapDispatchToProps = dispatch => ({
   setSearchShow: show => dispatch(setSearchShow(show))

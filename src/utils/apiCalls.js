@@ -1,6 +1,6 @@
 import { searchUrl, imageUrl, suggestionsUrl } from "./paths";
 import { key } from "./apiKey";
-import { cleanSearch } from './cleaner';
+import { cleanSearch, cleanSuggestions } from './cleaner';
 
 export const fetchWatchedShowId = (search) => {
   return fetch(
@@ -18,8 +18,9 @@ export const fetchWatchedShowId = (search) => {
 }
 
 export const fetchSuggestedShows = (showId) => {
+  console.log(showId)
   return fetch(
-    `${ suggestionsUrl }${ showId }/similar?api_key=${ key }&language=en-US&page=1`
+    `${ suggestionsUrl }tv/${ showId }/similar?api_key=${ key }&language=en-US&page=1`
   )
   .then(response => {
     if(!response.ok) {
@@ -28,6 +29,6 @@ export const fetchSuggestedShows = (showId) => {
       return response.json()
     }
   })
-    .then(data => console.log(data))
-    .catch(error => console.log(error.message))
+    .then(data => cleanSuggestions(data.results))
+    .catch(error => Error("Error while fetching suggestions"))
 }
