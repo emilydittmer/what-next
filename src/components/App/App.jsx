@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.scss';
-import Search from '../../containers/Search/Search'
-import { Route } from 'react-router-dom'
-import SuggestionContainer from '../../containers/SuggestionContainer/SuggestionContainer'
+import Search from '../../containers/Search/Search';
+import { Switch, Route } from 'react-router-dom';
+import SuggestionContainer from '../../containers/SuggestionContainer/SuggestionContainer';
+import Error from '../Error/Error'
 
 const App = () => {
   return (
@@ -10,8 +11,11 @@ const App = () => {
       <header className="App-header">
         <h1>What Next?</h1>
       </header>
-      <Search />
-      <Route exact path="/results" component={SuggestionContainer} />
+      <Switch>
+        <Route exact path="/" component={Search} />
+        <Route exact path="/results" component={SuggestionContainer} />
+        <Route render={Error} />
+      </Switch>
     </div>
   );
 }
