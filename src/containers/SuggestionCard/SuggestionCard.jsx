@@ -11,18 +11,24 @@ class SuggestionCard extends Component {
   render() {
     const { id, name, backgroundImg, voteAverage, overview, date } = this.props;
     return (
-      <article className="suggestion-card">
-        <div className="image--container">
-          <img src={backgroundImg} alt="{name} poster" />
-        </div>
-        <div className="content">
-          <h3>{name}</h3>
-          <p>{voteAverage}/10</p>
-          <p>First Aired: {date}</p>
-          <span className="sub-content">
-            <div className="sub-border" />
-            <p>{overview}</p>
-          </span>
+      <article
+        className="image-container"
+        style={{
+          background: `url(${backgroundImg})`
+        }}
+      >
+        <div
+          className="content"
+          style={{
+            background: "rgba(0,0,0,.8)"
+          }}
+        >
+          <div className="top-line">
+            <h3 className="name">{name}</h3>
+            <p className="average">{voteAverage}/10</p>
+          </div>
+          <p className="aired">First Aired: {date}</p>
+          <p className="overview">{overview}</p>
         </div>
       </article>
     );

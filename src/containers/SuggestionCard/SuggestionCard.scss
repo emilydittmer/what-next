@@ -1,12 +1,40 @@
-.suggestion-card {
-  width: 500px;
-  position: relative; 
-  margin: 20px;
+.image-container {
+  max-width: 500px;
+  position: relative;
+  max-height: 300px;
+  min-height: 250px; 
+  background-repeat: no-repeat; 
+  color: white;
 }
- 
-h3 { 
-  position: absolute; 
-  top: 200px; 
-  left: 0; 
-  width: 100%; 
+
+.name {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.top-line {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.aired{
+  padding-left: 10px;
+  margin: 0;
+}
+
+ .overview {
+   height: 75px;
+   overflow: scroll;
+   padding: 10px;
+   position: absolute;
+   bottom: 0;
+   text-align:justify;
  }
+
+ .content {
+  max-height: 300px;
+  min-height: 250px; 
+ }
+
