@@ -31,8 +31,10 @@ class SuggestionContainer extends Component{
   render(){
     return(
       <section>
-        <h3>Shows like {this.props.search.name}: </h3>
-        {this.showValue()}
+        <h2>Shows like {this.props.search.name}: </h2>
+        <div className='suggestion-container'>
+          {this.showValue()}
+        </div>
       </section>
     )
   }

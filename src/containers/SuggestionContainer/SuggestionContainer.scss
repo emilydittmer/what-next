@@ -1,0 +1,11 @@
+.suggestion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin: 20px;
+}
+
+h2 {
+  margin-left: 20px;
+}
