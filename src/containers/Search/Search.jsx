@@ -23,14 +23,11 @@ export class Search extends Component {
 
     const { searchValue } = this.state;
     let searchedShow = await fetchWatchedShowId(searchValue);
-    console.log(searchedShow);
 
     if (!searchedShow.error) {
-      console.log(searchedShow);
       this.props.setSearchShow(searchedShow);
       this.props.history.push("/results");
     } else {
-      console.log(searchedShow);
       this.setState({ error: "No results found. Please search again" });
     }
     this.resetInputs();

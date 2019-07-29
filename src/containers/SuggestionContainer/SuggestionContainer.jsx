@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SuggestionContainer.scss';
 import { fetchSuggestedShows } from '../../utils/apiCalls'
 import { connect } from 'react-redux';
-import { grabSuggestedShows, setSearchShow } from '../../actions';
+import { grabSuggestedShows } from '../../actions';
 import SuggestionCard from '../SuggestionCard/SuggestionCard'
 
 class SuggestionContainer extends Component{
@@ -18,16 +18,21 @@ class SuggestionContainer extends Component{
       .then(shows => this.props.grabSuggestedShows(shows))
       .catch(this.setState({ error: "Error fetching suggestions" }));
   }
-
+  showValue() {
+    if(this.props.suggestion) {
+      return(<h2>{this.state.error}</h2>)
+    } else {
+      return this.props.suggestions.map(suggestion => (
+        <SuggestionCard {...suggestion} key={suggestion.id} />
+      ))
+    }
+  }
+      
   render(){
-    const { suggestions } = this.props;
-    const displaySuggestions = suggestions.map(suggestion => (
-      <SuggestionCard {...suggestion} key={suggestion.id} />
-    ))
     return(
       <section>
-        <h3>Shows like {this.props.search.name}:</h3>
-        {displaySuggestions}
+        <h3>Shows like {this.props.search.name}: </h3>
+        {this.showValue()}
       </section>
     )
   }
