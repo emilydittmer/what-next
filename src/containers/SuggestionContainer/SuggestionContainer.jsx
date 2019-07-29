@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { grabSuggestedShows } from '../../actions';
 import SuggestionCard from '../SuggestionCard/SuggestionCard'
 
-class SuggestionContainer extends Component{
+export class SuggestionContainer extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -18,6 +18,7 @@ class SuggestionContainer extends Component{
       .then(shows => this.props.grabSuggestedShows(shows))
       .catch(this.setState({ error: "Error fetching suggestions" }));
   }
+  
   showValue() {
     if(this.props.suggestion) {
       return(<h2>{this.state.error}</h2>)
@@ -40,12 +41,12 @@ class SuggestionContainer extends Component{
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   search: state.search,
   suggestions: state.suggestions
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   grabSuggestedShows: shows => dispatch(grabSuggestedShows(shows))
 })
 

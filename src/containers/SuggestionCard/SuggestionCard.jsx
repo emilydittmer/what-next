@@ -20,7 +20,7 @@ class SuggestionCard extends Component {
         <div
           className="content"
           style={{
-            background: "rgba(0,0,0,.8)"
+            background: "rgba(0,0,0,.7)"
           }}
         >
           <div className="top-line">

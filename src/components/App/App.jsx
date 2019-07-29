@@ -4,13 +4,12 @@ import Search from '../../containers/Search/Search';
 import { Switch, Route } from 'react-router-dom';
 import SuggestionContainer from '../../containers/SuggestionContainer/SuggestionContainer';
 import Error from '../Error/Error'
+import Header from '../Header/Header'
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>What Next?</h1>
-      </header>
+      <Header />
       <Switch>
         <Route exact path="/" component={Search} />
         <Route exact path="/results" component={SuggestionContainer} />

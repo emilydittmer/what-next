@@ -16,7 +16,6 @@ export const fetchWatchedShowId = search => {
 };
 
 export const fetchSuggestedShows = showId => {
-  console.log(showId);
   return fetch(
     `${suggestionsUrl}tv/${showId}/similar?api_key=${key}&language=en-US&page=1`
   )
