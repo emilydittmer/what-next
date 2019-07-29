@@ -13,4 +13,14 @@ describe('actions', () => {
     //expectation
     expect(result).toEqual(expectedAction);
   });
+
+  it('should have a type of GRAB_SUGGESTED_SHOWS', () => {
+    const shows = {shows: 'The Office'}
+    const expectedAction = {
+      type: 'GRAB_SUGGESTED_SHOWS',
+      shows: shows
+    }
+    const result = actions.grabSuggestedShows(shows);
+    expect(result).toEqual(expectedAction);
+  })
 })
