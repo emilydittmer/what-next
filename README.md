@@ -35,7 +35,15 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 
 
 ## Screenshots
-
+### Home Page
+![Home Page](https://github.com/emilydittmer/what-next/blob/master/src/images/Screen%20Shot%202019-07-29%20at%207.00.05%20PM.png)
+### Suggestions Page
+![Suggestions Page](https://github.com/emilydittmer/what-next/blob/master/src/images/Screen%20Shot%202019-07-29%20at%208.31.15%20PM.png)
+### Watchlist Page
+![Watchlist Page](https://github.com/emilydittmer/what-next/blob/master/src/images/Screen%20Shot%202019-07-29%20at%208.31.29%20PM.png)
+### Wireframing
+![Wireframe Homepage](https://github.com/emilydittmer/what-next/blob/master/src/images/Screen%20Shot%202019-07-29%20at%208.34.31%20PM.png)
+![Wireframe Suggestions Page](https://github.com/emilydittmer/what-next/blob/master/src/images/Screen%20Shot%202019-07-29%20at%208.33.33%20PM.png)
 
 ## Learning Goals
 
