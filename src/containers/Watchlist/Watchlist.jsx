@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import SuggestionCard from '../SuggestionCard/SuggestionCard';
 import PropTypes from "prop-types";
 
-class Watchlist extends Component {
+export class Watchlist extends Component {
   constructor() {
     super();
   }

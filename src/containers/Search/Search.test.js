@@ -45,7 +45,7 @@ describe('Search', () => {
     expect(wrapper.state('searchValue')).toEqual('The Office')
   })
 
-  it('should call setSearchShow', async () => {
+  xit('should call setSearchShow', async () => {
     wrapper.instance().fetchWatchedShowId = jest.fn(() => 'The Office')
     wrapper.setState({searchValue: 'The Office'})
     let mockSetSearchShow = jest.fn()
