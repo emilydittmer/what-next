@@ -23,4 +23,34 @@ describe('actions', () => {
     const result = actions.grabSuggestedShows(shows);
     expect(result).toEqual(expectedAction);
   })
+
+  it('should have a type of ADD_TO_WATCHLIST', () => {
+    const show = {show: {id: 1, name:'The Office'}}
+    const expectedAction = {
+      type: 'ADD_TO_WATCHLIST',
+      show: show
+    }
+    const result = actions.addToWatchlist(show);
+    expect(result).toEqual(expectedAction);
+  })
+
+  it('should have a type of DELETE_FROM_WATCHLIST', () => {
+    const show = {show: {id: 1, name:'The Office'}}
+    const expectedAction = {
+      type: 'DELETE_FROM_WATCHLIST',
+      show: show
+    }
+    const result = actions.deleteFromWatchlist(show);
+    expect(result).toEqual(expectedAction);
+  })
+
+  it('should have a type of GRAB_WATCHLIST', () => {
+    const shows = {shows: {id: 1, name:'The Office'}}
+    const expectedAction = {
+      type: 'GRAB_WATCHLIST',
+      shows: shows
+    }
+    const result = actions.grabWatchlist(shows);
+    expect(result).toEqual(expectedAction);
+  })
 })

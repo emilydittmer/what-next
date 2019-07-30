@@ -17,8 +17,11 @@
 .top-line {
   display: flex;
   margin-bottom: 0px;
+  justify-content: space-between;
 }
-
+.left-top-line {
+  display:flex;
+}
 .aired{
   padding-left: 10px;
   margin: 0;
@@ -37,4 +40,17 @@
   max-height: 300px;
   min-height: 250px; 
  }
+
+ .inactive{
+  cursor: pointer;
+  height: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  position: relative;
+  width: 30px;
+  z-index: 1;
+}
+.inactive:hover{
+  width: 35px;    
+}
 
