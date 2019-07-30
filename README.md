@@ -5,14 +5,14 @@
 What Next? is a solo project, built in six days, focusing on the React, Redux, Router, Enzyme/Jest, and fetching API calls, the concepts learned in the last six weeks. This app allows a user to enter in a recently completed TV show and find suggestions on what to watch next based on that show. The user can then add any show to their watchlist. Once a show is added to the watchlist, they will be able to view all selected shows and remove any show from the list. 
 
 ## Technologies Used
-- HTML
-- SCSS 
-- JavaScript
 - React
 - Redux
 - Router
 - Jest & Enzyme
 - API fetches
+- JavaScript
+- SCSS
+- HTML
 
 ## Installation
 
