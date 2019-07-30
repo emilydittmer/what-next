@@ -14,7 +14,7 @@ What Next? is a solo project focused on the React, Redux, Router, Enzyme/Jest, a
 - Jest & Enzyme
 - API fetches
 
-## Installation - Front-End
+## Installation
 
 ```bash
 git clone https://github.com/emilydittmer/what-next.git
