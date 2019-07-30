@@ -9,7 +9,7 @@ class Watchlist extends Component {
   }
 
   showWatchlist() {
-    if (!this.props.watchlist) {
+    if (this.props.watchlist.length === 0) {
       return(<h3>Please add shows to your watchlist.</h3>)
     } else {
       return this.props.watchlist.map(show => (
