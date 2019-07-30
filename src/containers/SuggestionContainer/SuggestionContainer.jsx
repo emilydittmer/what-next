@@ -18,10 +18,11 @@ export class SuggestionContainer extends Component{
       .then(shows => this.props.grabSuggestedShows(shows))
       .catch(this.setState({ error: "Error fetching suggestions" }));
   }
-  
+
   showValue() {
-    if(this.props.suggestion) {
-      return(<h2>{this.state.error}</h2>)
+    console.log(this.props)
+    if(this.props.suggestions.error || this.props.suggestions.length === 0) {
+      return(<h3>{this.state.error}</h3>)
     } else {
       return this.props.suggestions.map(suggestion => (
         <SuggestionCard {...suggestion} key={suggestion.id} />
