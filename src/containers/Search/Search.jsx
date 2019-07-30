@@ -56,7 +56,7 @@ export class Search extends Component {
             onClick={event => this.handleSubmit(event)}
           />
         </div>
-        {this.state.error === "" ? <p /> : <p>{this.state.error}</p>}
+        {this.state.error === "" ? <p /> : <p className='no-results'>{this.state.error}</p>}
       </form>
     );
   }

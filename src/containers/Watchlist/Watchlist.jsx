@@ -21,7 +21,7 @@ export class Watchlist extends Component {
   render() {
     return(
       <section>
-        <h2>Your Watchlist</h2>
+        <h2 className='watchlist'>Your Watchlist</h2>
         <div className='suggestion-container'>
           {this.showWatchlist()}
         </div>
