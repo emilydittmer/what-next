@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Search } from './Search';
+import { Search, mapDispatchToProps } from './Search';
+import { setSearchShow } from "../../actions";
 
 describe('Search', () => {
   let wrapper, props;
@@ -67,4 +68,15 @@ describe('Search', () => {
     wrapper.instance().resetInputs()
     expect(wrapper.state('searchValue')).toEqual('')
   })
+
 })
+
+describe("mapDispatchToProps", () => {
+  it("calls dispatch with a setSearchShow action", () => {
+    const mockDispatch = jest.fn();
+    const actionToDispatch = setSearchShow({name: 'The Office'});
+    const mappedDispatch = mapDispatchToProps(mockDispatch);
+    mappedDispatch.setSearchShow({name: 'The Office'});
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+  });
+});
