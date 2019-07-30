@@ -2,7 +2,7 @@
 
 ## Description
 
-What Next? is a solo project focused on the React, Redux, Router, Enzyme/Jest, and fetching API calls, the concepts learned in the last six weeks. This app allows a user to enter in a recently completed TV show and find suggestions on what to watch next based on that show. The user can then add any show to their watchlist. Once a show is added to the watchlist, they will be able to view all selected shows and remove any show from the list. 
+What Next? is a solo project, built in six days, focusing on the React, Redux, Router, Enzyme/Jest, and fetching API calls, the concepts learned in the last six weeks. This app allows a user to enter in a recently completed TV show and find suggestions on what to watch next based on that show. The user can then add any show to their watchlist. Once a show is added to the watchlist, they will be able to view all selected shows and remove any show from the list. 
 
 ## Technologies Used
 - HTML
@@ -46,7 +46,7 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 ![Wireframe Suggestions Page](https://github.com/emilydittmer/what-next/blob/master/src/images/Screen%20Shot%202019-07-29%20at%208.33.33%20PM.png)
 
 ## Learning Goals
-
+Building a solo app with React, Router, Redux, Enzyme/Jest to demonstrate the concepts learned.
 
 ## Contributors
 [Emily Dittmer](https://github.com/emilydittmer)
