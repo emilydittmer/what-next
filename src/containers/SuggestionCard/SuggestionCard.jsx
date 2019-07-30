@@ -8,8 +8,9 @@ import {
 } from "../../actions";
 import active from "../../images/bookmark-black-shape.svg";
 import inactive from "../../images/bookmark-white.svg";
+import PropTypes from "prop-types";
 
-class SuggestionCard extends Component {
+export class SuggestionCard extends Component {
   constructor(props) {
     super(props);
   }
@@ -60,7 +61,7 @@ class SuggestionCard extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   suggestions: state.suggestions,
   watchlist: state.watchlist
 });
@@ -70,6 +71,17 @@ export const mapDispatchToProps = dispatch => ({
   addToWatchlist: watchlist => dispatch(addToWatchlist(watchlist)),
   deleteFromWatchlist: watchlist => dispatch(deleteFromWatchlist(watchlist))
 });
+
+SuggestionCard.propTypes = {
+  id: PropTypes.number, 
+  name: PropTypes.string, 
+  backgroundImg: PropTypes.string,
+  voteAverage: PropTypes.number,
+  overview: PropTypes.string,
+  date: PropTypes.string,
+  suggestions: PropTypes.array,
+  watchlist: PropTypes.array
+};
 
 export default connect(
   mapStateToProps,
