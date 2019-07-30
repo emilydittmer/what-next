@@ -21,8 +21,10 @@ export class SuggestionContainer extends Component{
   }
 
   showValue() {
-    if(this.props.suggestions.error || this.props.suggestions.length === 0) {
+    if(this.props.suggestions.error) {
       return(<h3>{this.state.error}</h3>)
+    } else if(this.props.suggestions.length === 0){
+      return (<h3>No Results Found</h3>)
     } else {
       return this.props.suggestions.map(suggestion => (
         <SuggestionCard {...suggestion} key={suggestion.id} />
@@ -33,7 +35,7 @@ export class SuggestionContainer extends Component{
   render(){
     return(
       <section>
-        <h2>Shows like {this.props.search.name}: </h2>
+        <h2 className='shows-like'>Shows like {this.props.search.name}: </h2>
         <div className='suggestion-container'>
           {this.showValue()}
         </div>

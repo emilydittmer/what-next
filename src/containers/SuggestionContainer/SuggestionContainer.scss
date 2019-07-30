@@ -6,6 +6,12 @@
   margin: 20px;
 }
 
-h2 {
+.shows-like,
+.watchlist {
   margin-left: 20px;
+  color: hsla(4, 62%, 30%, 1);
+  font-size: 2em;
+  font-weight: 700;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+
