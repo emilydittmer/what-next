@@ -1,4 +1,4 @@
-import { searchUrl, imageUrl, suggestionsUrl } from "./paths";
+import { searchUrl, suggestionsUrl } from "./paths";
 import { key } from "./apiKey";
 import { cleanSearch, cleanSuggestions } from "./cleaner";
 

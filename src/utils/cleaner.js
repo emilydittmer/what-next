@@ -14,6 +14,7 @@ export const cleanSuggestions = (shows) => {
     overview: show.overview,
     voteAverage: show.vote_average,
     date: show.first_air_date,
-    backgroundImg: `${imageUrl}${show.backdrop_path}`
+    backgroundImg: `${imageUrl}${show.backdrop_path}`,
+    favorited: false
   }))
 }
