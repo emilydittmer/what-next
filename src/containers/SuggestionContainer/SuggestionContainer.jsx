@@ -4,6 +4,7 @@ import { fetchSuggestedShows } from '../../utils/apiCalls'
 import { connect } from 'react-redux';
 import { grabSuggestedShows } from '../../actions';
 import SuggestionCard from '../SuggestionCard/SuggestionCard'
+import PropTypes from "prop-types";
 
 export class SuggestionContainer extends Component{
   constructor(props){
@@ -20,7 +21,6 @@ export class SuggestionContainer extends Component{
   }
 
   showValue() {
-    console.log(this.props)
     if(this.props.suggestions.error || this.props.suggestions.length === 0) {
       return(<h3>{this.state.error}</h3>)
     } else {
@@ -50,5 +50,10 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   grabSuggestedShows: shows => dispatch(grabSuggestedShows(shows))
 })
+
+SuggestionContainer.propTypes = {
+  search: PropTypes.object,
+  suggestions: PropTypes.array
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SuggestionContainer);

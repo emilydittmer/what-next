@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../SuggestionContainer/SuggestionContainer.scss';
 import { connect } from 'react-redux';
-import SuggestionCard from '../SuggestionCard/SuggestionCard'
+import SuggestionCard from '../SuggestionCard/SuggestionCard';
+import PropTypes from "prop-types";
 
 class Watchlist extends Component {
   constructor() {
@@ -32,6 +33,10 @@ class Watchlist extends Component {
 export const mapStateToProps = state => ({
   watchlist: state.watchlist
 })
+
+Watchlist.propTypes = {
+  watchlist: PropTypes.array
+}
 
 
 export default connect(mapStateToProps)(Watchlist);

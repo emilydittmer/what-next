@@ -35,12 +35,12 @@ describe('actions', () => {
   })
 
   it('should have a type of DELETE_FROM_WATCHLIST', () => {
-    const show = {show: {id: 1, name:'The Office'}}
+    const id = 1
     const expectedAction = {
       type: 'DELETE_FROM_WATCHLIST',
-      show: show
+      id: id
     }
-    const result = actions.deleteFromWatchlist(show);
+    const result = actions.deleteFromWatchlist(id);
     expect(result).toEqual(expectedAction);
   })
 
